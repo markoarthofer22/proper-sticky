@@ -67,6 +67,8 @@ function stickySideBar(element, options = {}) {
         //calculate height of parent + distance from top
         selectedParentElementBottomPosition = selectedParentElement.height() + (window.pageYOffset + selectedParentElement[0].getBoundingClientRect().top) - stickyBarHeight - stickyBarOffsetTop;
 
+         if (selectedParentElement.height() < window.innerHeight) return;
+
         $(window).scroll(function () {
             var windowScrollTop = $(this).scrollTop();
 
