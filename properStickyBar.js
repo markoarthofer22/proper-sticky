@@ -67,7 +67,16 @@ function stickySideBar(element, options = {}) {
         //calculate height of parent + distance from top
         selectedParentElementBottomPosition = selectedParentElement.height() + (window.pageYOffset + selectedParentElement[0].getBoundingClientRect().top) - stickyBarHeight - stickyBarOffsetTop;
 
-         if (selectedParentElement.height() < window.innerHeight) return;
+        // calculate height of all elements in parent
+        var selectedParentsElementChildrenHeight = stickyBarOffsetTop;
+        selectedParentElement.children().each(function (index, item) {
+            selectedParentsElementChildrenHeight += $(item).height();
+        });
+
+        // disable scroll if elements are approximately the same height
+        if (selectedParentsElementChildrenHeight + 50 >= selectedParentElement.height()) {
+            return;
+        }
 
         $(window).scroll(function () {
             var windowScrollTop = $(this).scrollTop();
