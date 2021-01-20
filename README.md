@@ -19,7 +19,7 @@ Lightweight and easy to use. No need for external dependencies (beside jQuery). 
     2. Include Sticky lib
     3. Call Sticky
 
-### Improtant => Initialize properStickyBar only after all elements are rendered 
+### Important => Initialize properStickyBar only after all elements are rendered 
 
 ```
 <script src="jquery.js"></script>
@@ -40,10 +40,11 @@ Options is an object with additional options. It is not required. More on that b
 
 Usually you will do this on resize event. Pretty straightforward. Only you need to check if you instance exist
 
+
 ```
-    $(window).on("resize", function () {
-        stickyInstance?.updateSticky?.();
-    });
+$(window).on("resize", function () {
+    stickyInstance?.updateSticky?.();
+});
 ```
 
 **destroy()** => destroy an instace, removes classes and events
