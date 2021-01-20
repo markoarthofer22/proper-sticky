@@ -30,34 +30,34 @@ Lightweight and easy to use. No need for external dependencies (beside jQuery). 
 </script>
 ```
 
-    Options is an object with additional options. It is not required. More on that bellow. 
+Options is an object with additional options. It is not required. More on that bellow. 
 
 ## Methods
-    **init()** => called by default when instance is created
-    **updateSticky()** => call when you want to update your instance
+**init()** => called by default when instance is created
+**updateSticky()** => call when you want to update your instance
 
-        #### How to update stickyBar
+    #### How to update stickyBar
 
-        Usually you will do this on resize event. Pretty straightforward. Only you need to check if you instance exist
+    Usually you will do this on resize event. Pretty straightforward. Only you need to check if you instance exist
 
-        ```
-            $(window).on("resize", function () {
-                stickyInstance?.updateSticky?.();
-            });
-        ```
+    ```
+        $(window).on("resize", function () {
+            stickyInstance?.updateSticky?.();
+        });
+    ```
 
-    **destroy()** => destroy an instace, removes classes and events
+**destroy()** => destroy an instace, removes classes and events
 
-    ` stickyInstance?.destroy?.();`
+` stickyInstance?.destroy?.();`
 
 ## Options
 
-    All options are optional.
+All options are optional.
 
-    - `parentElementClass`: (default: first parent of element). Specify this for scroll borders. Your element will scroll to it's height
-    - `wrappClass`: (default: "sticked"). Default wrapping class for element
-    - `activeStickyClass`: (default: "is-sticked"). Default class that becomes active when element becomes sticked
-    - `activeBottomClass`: (default: "is-bottom"). Default class that becomes acitve when sticky has touched the bottom of parent
-    - `top`: (default: 0). Offset from top of window
-    - `width`: (default: element-width). Specify this only if you want to override element width
-    - `disableOnMobile`: (default: true). Disable sticky on mobile. default is true = 992px. If you don't want to disable it on mobile select false, or if you want different breakpoint define it (number in pixels)
+- `parentElementClass`: (default: first parent of element). Specify this for scroll borders. Your element will scroll to it's height
+- `wrappClass`: (default: "sticked"). Default wrapping class for element
+- `activeStickyClass`: (default: "is-sticked"). Default class that becomes active when element becomes sticked
+- `activeBottomClass`: (default: "is-bottom"). Default class that becomes acitve when sticky has touched the bottom of parent
+- `top`: (default: 0). Offset from top of window
+- `width`: (default: element-width). Specify this only if you want to override element width
+- `disableOnMobile`: (default: true). Disable sticky on mobile. default is true = 992px. If you don't want to disable it on mobile select false, or if you want different breakpoint define it (number in pixels)
