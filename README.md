@@ -34,6 +34,7 @@ Options is an object with additional options. It is not required. More on that b
 
 ## Methods
 **init()** => called by default when instance is created
+
 **updateSticky()** => call when you want to update your instance
 
 #### How to update stickyBar
