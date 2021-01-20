@@ -36,19 +36,19 @@ Options is an object with additional options. It is not required. More on that b
 **init()** => called by default when instance is created
 **updateSticky()** => call when you want to update your instance
 
-    #### How to update stickyBar
+#### How to update stickyBar
 
-    Usually you will do this on resize event. Pretty straightforward. Only you need to check if you instance exist
+Usually you will do this on resize event. Pretty straightforward. Only you need to check if you instance exist
 
-    ```
-        $(window).on("resize", function () {
-            stickyInstance?.updateSticky?.();
-        });
-    ```
+```
+    $(window).on("resize", function () {
+        stickyInstance?.updateSticky?.();
+    });
+```
 
 **destroy()** => destroy an instace, removes classes and events
 
-` stickyInstance?.destroy?.();`
+`stickyInstance?.destroy?.();`
 
 ## Options
 
